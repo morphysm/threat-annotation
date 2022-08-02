@@ -19,11 +19,18 @@ This project is a reimplementation in [Go](https://go.dev/) of the [threatspec](
 ## Init and run threatspec
 In the same directory
 
-    $ threatspec init && threatspec run
+    $ famed-annotated init && famed-annotated run
 
 ## Generate report
 
-    $ threatspec report
+    $ famed-annotated report
+
+# Roadmap
+
+- Improve the rendering of the report with mermaid diagrams
+- Add a report history
+- Add a difference checker based on the checksum of the content of functions.
+- Add more parser for C/C++, Javascript, Rust, Solidity and more..
 
 # threatspec
 
