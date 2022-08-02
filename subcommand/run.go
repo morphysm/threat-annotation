@@ -30,6 +30,11 @@ func (a *Run) Run() error {
 		Threats:    map[string]library.Threat{},
 	}
 
+	/*
+		@accepts arbitrary file writes to WebApp:FileSystem with filename restrictions
+		@mitigates WebApp:FileSystem against unauthorised access with strict file permissions
+	*/
+
 	// Pares every go files.
 	for _, s := range find("./", ".go") {
 		dat, _ := os.ReadFile(s)

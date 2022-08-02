@@ -5,6 +5,8 @@ import (
 	"os"
 	"regexp"
 	"strings"
+
+	"github.com/rotisserie/eris"
 )
 
 type (
@@ -372,4 +374,48 @@ func (l *Library) SaveFiles() {
 
 	file, _ = json.MarshalIndent(l.ThreatModel, "", " ")
 	os.WriteFile("threatmodel/threatModel.json", file, 0o666)
+}
+
+func (l *Library) ReadFiles() error {
+	controlsFile, err := os.ReadFile("threatmodel/controls.json")
+	if err != nil {
+		return eris.Wrap(err, "failed to read threatmodel/controls.json")
+	}
+
+	threatsFile, err := os.ReadFile("threatmodel/threats.json")
+	if err != nil {
+		return eris.Wrap(err, "failed to read threatmodel/threats.json")
+	}
+
+	componentsFile, err := os.ReadFile("threatmodel/components.json")
+	if err != nil {
+		return eris.Wrap(err, "failed to read threatmodel/components.json")
+	}
+
+	threatModelFile, err := os.ReadFile("threatmodel/threatModel.json")
+	if err != nil {
+		return eris.Wrap(err, "failed to read threatmodel/threatModel.json")
+	}
+
+	err = json.Unmarshal(controlsFile, &l.Controls)
+	if err != nil {
+		return eris.Wrap(err, "failed to understand threatmodel/controls.json")
+	}
+
+	err = json.Unmarshal(threatsFile, &l.Threats)
+	if err != nil {
+		return eris.Wrap(err, "failed to understand threats/controls.json")
+	}
+
+	err = json.Unmarshal(componentsFile, &l.Components)
+	if err != nil {
+		return eris.Wrap(err, "failed to understand threatmodel/components.json")
+	}
+
+	err = json.Unmarshal(threatModelFile, &l.ThreatModel)
+	if err != nil {
+		return eris.Wrap(err, "failed to understand threatmodel/threatModel.json")
+	}
+
+	return nil
 }

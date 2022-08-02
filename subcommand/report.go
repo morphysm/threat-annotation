@@ -1,5 +1,11 @@
 package subcommand
 
+import (
+	"github.com/rotisserie/eris"
+
+	"github.com/morphysm/famed-annotated/report"
+)
+
 type Report struct{}
 
 func (*Report) Help() string {
@@ -7,5 +13,10 @@ func (*Report) Help() string {
 }
 
 func (a *Report) Run() error {
+	err := report.FileReport()
+	if err != nil {
+		return eris.Wrap(err, "failed to generate report file")
+	}
+
 	return nil
 }
