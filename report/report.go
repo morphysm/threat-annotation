@@ -1,8 +1,8 @@
 package report
 
 import (
-	"fmt"
 	"os"
+	"time"
 
 	"github.com/rotisserie/eris"
 
@@ -26,7 +26,7 @@ func FileReport() error {
 func report() (string, error) {
 	md := NewMarkdown()
 
-	md.WriteTitle("hello", LevelTitle)
+	md.WriteTitle("famed-annotated report "+time.Now().Format(time.RFC822), 1)
 
 	l := &library.Library{
 		Components: map[string]library.Component{},
@@ -38,10 +38,34 @@ func report() (string, error) {
 		return "", err
 	}
 
-	for name, component := range l.Components {
-		fmt.Println(name)
+	md.Writeln()
+	md.WriteTitle("Components", 2)
+	for _, component := range l.Components {
+		md.Writeln()
 
-		fmt.Println(component)
+		md.WriteTitle(component.Name, 3)
+		md.Write(component.Id)
+		md.Write(component.Description)
+	}
+
+	md.Writeln()
+	md.WriteTitle("Controls", 2)
+	for _, control := range l.Controls {
+		md.Writeln()
+
+		md.WriteTitle(control.Name, 3)
+		md.Write(control.Id)
+		md.Write(control.Description)
+	}
+
+	md.Writeln()
+	md.WriteTitle("Threats", 2)
+	for _, threat := range l.Threats {
+		md.Writeln()
+
+		md.WriteTitle(threat.Name, 3)
+		md.Write(threat.Id)
+		md.Write(threat.Description)
 	}
 
 	return md.String(), nil
