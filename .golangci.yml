@@ -1,0 +1,26 @@
+---
+linters:
+  enable-all: true
+  disable:
+    - maligned
+    - exhaustivestruct
+    - interfacer
+    - scopelint
+    - golint
+    - goimports
+    - importas
+    - depguard
+    - lll
+    - exhaustruct
+    - funlen
+    - cyclop
+linters-settings:
+  gci:
+    sections:
+      - standard
+      - default
+      - prefix(github.com/morphysm/famed-annotated)
+  gofumpt:
+    extra-rules: true
+issues:
+  fix: true
