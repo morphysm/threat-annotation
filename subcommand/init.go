@@ -22,7 +22,7 @@ func (a *Init) Run() error {
 		return eris.Wrap(err, "failed to create configuration file")
 	}
 
-	err = os.Mkdir("threatmodel", os.FileMode(0o60))
+	err = os.Mkdir("threatmodel", os.FileMode(0o700))
 	if err != nil {
 		return eris.Wrap(err, "failed to create threatmodel directory")
 	}

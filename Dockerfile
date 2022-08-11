@@ -1,5 +1,5 @@
 # https://github.com/docker-library/golang
-FROM golang:1.18 as build-env
+FROM golang:1.19 as build-env
 
 WORKDIR /go/src/app
 

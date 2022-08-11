@@ -1,0 +1,30 @@
+{
+ "#file_perms:": {
+  "id": "#file_perms:",
+  "run_id": "",
+  "name": "#file_perms:",
+  "description": "",
+  "custom": {}
+ },
+ "Web Application Firewall (#waf):": {
+  "id": "Web Application Firewall (#waf):",
+  "run_id": "",
+  "name": "Web Application Firewall (#waf):",
+  "description": "",
+  "custom": {}
+ },
+ "basic input validation.": {
+  "id": "basic input validation.",
+  "run_id": "",
+  "name": "basic input validation.",
+  "description": "",
+  "custom": {}
+ },
+ "non-privileged port": {
+  "id": "non-privileged port",
+  "run_id": "",
+  "name": "non-privileged port",
+  "description": "",
+  "custom": {}
+ }
+}

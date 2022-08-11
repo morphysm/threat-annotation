@@ -1,0 +1,7 @@
+imports:
+    - ./
+paths:
+    - ./
+project:
+    description: A famed-annotated project.
+    name: famed-annotated

@@ -1,0 +1,121 @@
+{
+ "#file_writes": {
+  "id": "#file_writes",
+  "run_id": "",
+  "name": "#file_writes",
+  "description": "",
+  "paths": [
+   []
+  ],
+  "custom": {}
+ },
+ "#xss": {
+  "id": "#xss",
+  "run_id": "",
+  "name": "#xss",
+  "description": "",
+  "paths": [
+   []
+  ],
+  "custom": {}
+ },
+ "HTTP:8080": {
+  "id": "HTTP:8080",
+  "run_id": "",
+  "name": "HTTP:8080",
+  "description": "",
+  "paths": [
+   [
+    "HTTP"
+   ]
+  ],
+  "custom": {}
+ },
+ "Is this a security feature?": {
+  "id": "Is this a security feature?",
+  "run_id": "",
+  "name": "Is this a security feature?",
+  "description": "",
+  "paths": [
+   []
+  ],
+  "custom": {}
+ },
+ "User:Browser": {
+  "id": "User:Browser",
+  "run_id": "",
+  "name": "User:Browser",
+  "description": "",
+  "paths": [
+   [
+    "User"
+   ]
+  ],
+  "custom": {}
+ },
+ "WebApp:FileSystem": {
+  "id": "WebApp:FileSystem",
+  "run_id": "",
+  "name": "WebApp:FileSystem",
+  "description": "",
+  "paths": [
+   [
+    "WebApp"
+   ]
+  ],
+  "custom": {}
+ },
+ "WebApp:Web": {
+  "id": "WebApp:Web",
+  "run_id": "",
+  "name": "WebApp:Web",
+  "description": "",
+  "paths": [
+   [
+    "WebApp"
+   ],
+   [
+    "WebApp"
+   ],
+   [
+    "WebApp"
+   ],
+   [
+    "WebApp"
+   ]
+  ],
+  "custom": {}
+ },
+ "WebApp:Web.": {
+  "id": "WebApp:Web.",
+  "run_id": "",
+  "name": "WebApp:Web.",
+  "description": "",
+  "paths": [
+   [
+    "WebApp"
+   ]
+  ],
+  "custom": {}
+ },
+ "arbitrary file reads": {
+  "id": "arbitrary file reads",
+  "run_id": "",
+  "name": "arbitrary file reads",
+  "description": "",
+  "paths": [
+   []
+  ],
+  "custom": {}
+ },
+ "content injection": {
+  "id": "content injection",
+  "run_id": "",
+  "name": "content injection",
+  "description": "",
+  "paths": [
+   []
+  ],
+  "custom": {}
+ }
+}

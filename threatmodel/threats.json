@@ -1,0 +1,58 @@
+{
+ "@cwe_319_cleartext_transmission": {
+  "id": "@cwe_319_cleartext_transmission",
+  "run_id": "",
+  "name": "@cwe_319_cleartext_transmission",
+  "description": "",
+  "custom": {}
+ },
+ "Cross-site Scripting (#xss):": {
+  "id": "Cross-site Scripting (#xss):",
+  "run_id": "",
+  "name": "Cross-site Scripting (#xss):",
+  "description": "",
+  "custom": {}
+ },
+ "WebApp:FileSystem": {
+  "id": "WebApp:FileSystem",
+  "run_id": "",
+  "name": "WebApp:FileSystem",
+  "description": "",
+  "custom": {}
+ },
+ "arbitrary file writes (#file_writes):": {
+  "id": "arbitrary file writes (#file_writes):",
+  "run_id": "",
+  "name": "arbitrary file writes (#file_writes):",
+  "description": "",
+  "custom": {}
+ },
+ "insufficient input validation.": {
+  "id": "insufficient input validation.",
+  "run_id": "",
+  "name": "insufficient input validation.",
+  "description": "",
+  "custom": {}
+ },
+ "privilege escalation": {
+  "id": "privilege escalation",
+  "run_id": "",
+  "name": "privilege escalation",
+  "description": "",
+  "custom": {}
+ },
+ "resource access abuse": {
+  "id": "resource access abuse",
+  "run_id": "",
+  "name": "resource access abuse",
+  "description": "",
+  "custom": {}
+ },
+ "unauthorised access": {
+  "id": "unauthorised access",
+  "run_id": "",
+  "name": "unauthorised access",
+  "description": "",
+  "custom": {}
+ }
+}

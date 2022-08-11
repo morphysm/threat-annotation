@@ -1,0 +1,160 @@
+{
+ "mitigations": [
+  {
+   "control": "#file_perms:",
+   "threat": "unauthorised access",
+   "component": "WebApp:FileSystem",
+   "description": "",
+   "custom": {},
+   "source": {
+    "annotation": "",
+    "code": "",
+    "filename": "",
+    "line": 0
+   }
+  },
+  {
+   "control": "basic input validation.",
+   "threat": "resource access abuse",
+   "component": "WebApp:Web",
+   "description": "",
+   "custom": {},
+   "source": {
+    "annotation": "",
+    "code": "",
+    "filename": "",
+    "line": 0
+   }
+  },
+  {
+   "control": "non-privileged port",
+   "threat": "privilege escalation",
+   "component": "WebApp:Web",
+   "description": "",
+   "custom": {},
+   "source": {
+    "annotation": "",
+    "code": "",
+    "filename": "",
+    "line": 0
+   }
+  }
+ ],
+ "exposures": [
+  {
+   "threat": "insufficient input validation.",
+   "component": "#xss",
+   "details": "WebApp:App",
+   "description": "",
+   "custom": {},
+   "source": {
+    "annotation": "",
+    "code": "",
+    "filename": "",
+    "line": 0
+   }
+  },
+  {
+   "threat": "insufficient input validation.",
+   "component": "content injection",
+   "details": "WebApp:App",
+   "description": "",
+   "custom": {},
+   "source": {
+    "annotation": "",
+    "code": "",
+    "filename": "",
+    "line": 0
+   }
+  }
+ ],
+ "transfers": [
+  {
+   "threat": "@cwe_319_cleartext_transmission",
+   "source_component": "WebApp:Web",
+   "destination_component": "User:Browser",
+   "details": "non-sensitive information.",
+   "description": "",
+   "custom": {},
+   "source": {
+    "annotation": "",
+    "code": "",
+    "filename": "",
+    "line": 0
+   }
+  }
+ ],
+ "acceptances": [
+  {
+   "threat": "WebApp:FileSystem",
+   "component": "#file_writes",
+   "details": "",
+   "description": "",
+   "custom": {},
+   "source": {
+    "annotation": "",
+    "code": "",
+    "filename": "",
+    "line": 0
+   }
+  },
+  {
+   "threat": "WebApp:FileSystem",
+   "component": "arbitrary file reads",
+   "details": "",
+   "description": "",
+   "custom": {},
+   "source": {
+    "annotation": "",
+    "code": "",
+    "filename": "",
+    "line": 0
+   }
+  }
+ ],
+ "connections": [
+  {
+   "source_component": "HTTP:8080",
+   "destination_component": "WebApp:Web",
+   "direction": "to",
+   "details": "User:Browser",
+   "description": "",
+   "custom": {},
+   "source": {
+    "annotation": "",
+    "code": "",
+    "filename": "",
+    "line": 0
+   }
+  }
+ ],
+ "reviews": [
+  {
+   "component": "Is this a security feature?",
+   "details": "WebApp:Web",
+   "description": "",
+   "custom": {},
+   "source": {
+    "annotation": "",
+    "code": "",
+    "filename": "",
+    "line": 0
+   }
+  }
+ ],
+ "tests": [
+  {
+   "component": "WebApp:Web.",
+   "control": "non-privileged port",
+   "description": "",
+   "custom": {},
+   "source": {
+    "annotation": "",
+    "code": "",
+    "filename": "",
+    "line": 0
+   }
+  }
+ ],
+ "run_id": ""
+}
