@@ -23,6 +23,9 @@ func FileReport() error {
 	return nil
 }
 
+// @exposes tmpl:Execute to XSS injection with insufficient input validation
+// @threat SQL Injection (#sqli)
+
 func report() (string, error) {
 	md := NewMarkdown()
 

@@ -210,8 +210,8 @@ func (l *Library) Parse(comment string) {
 	for _, match := range re.FindAllString(comment, -1) {
 		expose := Exposure{
 			Threat:    re.FindStringSubmatch(match)[3],
-			Component: re.FindStringSubmatch(match)[2],
-			Details:   re.FindStringSubmatch(match)[1],
+			Component: re.FindStringSubmatch(match)[1],
+			Details:   re.FindStringSubmatch(match)[2],
 		}
 		l.addExposure(&expose)
 	}
